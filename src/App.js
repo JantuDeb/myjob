@@ -10,6 +10,7 @@ import Post from './components/Post';
 import PostjobPage from './components/PostjobPage';
 import Application from './components/Application';
 import Postedjobs from './components/Postedjobs';
+import NoApplication from './components/NoApplication';
 
 
 
@@ -29,6 +30,7 @@ export default function App() {
                     <Route path="/postjobPages" element={<PostjobPage />} />
                     <Route path="/post" element={<Post />} />
                     <Route path="/application" element={<Application />} />
+                    <Route path ="/noapplication" element={<NoApplication />} />
                     
                 </Routes>
             </Router>

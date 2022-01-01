@@ -7,6 +7,8 @@ import axios from 'axios';
 
 export default function Login() {
 
+    const [errorMsg , setErrorMsg] = useState('');
+
 
     const initialValues = {usergmail: "", password : ""}
     const [formValues, setFormValues] = useState(initialValues);
@@ -36,8 +38,7 @@ export default function Login() {
             window.location.href = "/postedjobs";
         })
         .catch(err => {
-            console.log(err.response);
-            alert("incorrect email or password");
+            setErrorMsg("Incorrect email address or password");
         });
 
     }
@@ -85,6 +86,7 @@ export default function Login() {
                     onChange={handleChange} 
                     required
                     />
+                    <h5 id='errormsg'>{errorMsg}</h5>
                 
             </div>
 

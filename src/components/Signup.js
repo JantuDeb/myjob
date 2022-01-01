@@ -53,11 +53,11 @@ export default function Signup() {
                 let activeToken = res.data.data.token;
                 localStorage.setItem('activeToken', activeToken);
                
-                window.location.href = "/postedjobs";
+                window.location.href = "/postjobpage";
             })
             .catch(err => {
                 console.log(err.response);
-                alert("Fill the correct details / Check your inputs");
+                alert("You are already registered. Please try with other email id");
             });
 
 
@@ -86,6 +86,7 @@ export default function Signup() {
                         className="radio" 
                         name="choice" 
                         value="0" 
+                        required
                         onChange={handleChange}
                         />
                     <label htmlFor="Recruiter" className='radio-label'>Recruiter</label>
@@ -95,6 +96,7 @@ export default function Signup() {
                         className="radio " 
                         name="choice" 
                         value="1" 
+                        required
                         onChange={handleChange}
                         />
                     <label htmlFor="candidate" className='radio-label'>Candidate</label><br />
@@ -131,13 +133,14 @@ export default function Signup() {
 
                 <div className="mb-3">
                     
-                    <label htmlFor="createpassword" className="form-label">Create Password*</label>
+                    <label htmlFor="createpassword" className="form-label passwordform">Create Password*</label>
                     <input 
                         type="password" 
                         name= "createpassword"
-                        className="form-control" 
+                        className="form-control passwordinput" 
                         placeholder="Enter your password (min 8 characters)" 
                         required
+                        minLength={8}
                         value={formValues.userpassword}
                         onChange ={handleChange}
                         />
@@ -147,13 +150,14 @@ export default function Signup() {
                 
                 <div className="mb-3">
                     
-                    <label htmlFor="confirmpassword" className="form-label">Confirm Password*</label>
+                    <label htmlFor="confirmpassword" className="form-label passwordform">Confirm Password*</label>
                     <input 
                         type="password" 
                         name= "confirmpassword"
-                        className="form-control" 
+                        className="form-control passwordinput" 
                         placeholder="Enter your password (min 8 characters)" 
                         required
+                        minLength={8}
                         value={formValues.confirmpassword}
                         onChange ={handleChange}
                         />

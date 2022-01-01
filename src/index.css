@@ -1,13 +1,341 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
+
+
+:root{
+    --light-blue: #EDF6FF;
+    --midium-blue: #43AFFF;
+    --dark-blue: #303F60;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+
+    background-color: var(--light-blue);
+}
+
+a{
+    text-decoration: none;
+    color: var(--midium-blue);
+}
+
+button a {
+    color: white;
+}
+button a:hover {
+    color: white;
+}
+
+
+/* ------------NAVIGATION-------------------*/
+
+nav{
+    background-color: var(--dark-blue);
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: end;
+
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 7rem;
+    margin-top:1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+nav ul li:first-child{
+    margin-right: auto;
+    margin-left: 7rem;
+    margin-top: 1.5rem;
+
+    font-weight: bold;
+   
+    font-size: 2.2rem;
+
+}
+
+nav ul li a {
+    color: white;
+    
+
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav div{
+    background-color: #D9EFFF;
+    border-radius: 25px;
+    width: 4.6rem;
+    height: 4.6rem;
+    text-align: center;
+    padding-top: 1rem;
+
+    color: #303F60;
+    
+}
+
+.postjob{
+    transform: translateY(1.1rem);
+    font-weight: bold;
+}
+
+
+/* ................Button................ */
+button{
+    width: 14.8rem;
+    height: 4.6rem;
+    color: white;
+    font-size: 1.66rem;
+
+    border: 1px solid #43AFFF ;
+    background: #43AFFF33;
+    border-radius: 5px;
+}
+
+form button , .btn-blue{
+    display: block;
+    background-color: var(--midium-blue);
+    
+
+    margin: 4rem auto 2rem auto;
+}
+
+
+
+/* ------------------------------------- */
+
+.bluetext{
+    color: var(--midium-blue);
+}
+
+
+/* ------------Header-------------------*/
+
+.application {
+    height: 60vh;
+}
+
+/* Form conatianer */
+
+.form_container, .application{
+    background-color: white;
+    width: 40vw;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 30px 36px #557DA526;
+
+    transform: translateY(-20vh);
+    
+}
+
+.form_container h2{
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.form-text-right-align {
+    
+    display: inline-block;
+    float: right;
+      
+}
+
+
+.form_container input {
+    height: 4rem;
+    padding: 1rem; 
+    border-radius: 5px;
+    background-color: #E8E8E833;
+
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+form p{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+form .alignleft{
+    text-align: left;
+    font-size: 1.4rem;
+    color: #303F60;
+    line-height: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+form .radio{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+   
+ transform: translateY(1.2rem);
+}
+
+form .radio-label{
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+form .jobdescription{
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    
+}
+
+/* ..........Header............ */
+header{
+    background-color: var(--dark-blue);
+    min-height: 30vh;
+    transform: translateY(-1rem);
+    
+}
+
+header button{
+    display: inline-block;
+    
+}
+
+
+.lessheight{
+    height: 15vh;
+}
+
+
+header p{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 15%;
+    opacity: 0.8;
+}
+
+.bigheader {
+    height: 45vh;
+}
+
+header .flex{
+    margin-top: 1rem;
+    display: inline-block;
+    flex-direction: column;
+    margin-left: 16rem;
+    width: 40rem;
+}
+
+
+header h1{
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    
+
+    
+}
+
+header img{
+    width: 55rem;
+    margin-left: 10rem;
+    transform: translateY(-2rem);
+
+}
+
+
+header h2 {
+    color: white;
+    margin-left: 15%;
+}
+
+.homecontainer{
+    margin-top: 4rem;
+}
+
+
+.homecontainer h1{
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.homecontainer div{
+    background-color: white;
+    box-shadow: 0px 3px 6px #557DA526;
+    padding: 2rem;
+    width: 30%;
+    border-radius: 5px;
+    opacity: 1;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.homecontainer div h3{
+    margin-bottom: 1rem;
+    font-size: bold;
+    color: #43AFFF;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+/* ..............Card.......... */
+
+.card{
+    width: 30rem;
+    box-shadow: 0px 3px 6px #557DA526;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 1rem;
+}
+
+.card p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: 1.4rem;
+    color: #303F60;
+    opacity: 0.8; 
+    color: #303f60;  
+}
+
+
+.jobscontainer {
+    width: 33rem;
+    padding: 2rem;
+    box-shadow: 0px 3px 6px #557DA526;
+    border-radius: 5px;
+    opacity: 1;
+    background-color: white;
+
+    display: inline-block;
+    margin: 2rem;
+    transform: translateY(-9rem);
+    
+}
+
+.blackcolor{
+    color:black;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.jobscontainer h3{
+    display: inline-block;
+    margin-right: 4rem;
+}
+

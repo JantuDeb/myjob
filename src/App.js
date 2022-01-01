@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router , Routes, Route} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Signup from './components/Signup';
+import Login from './components/Login';
+import Home from './components/Home';
+import ForgotPassword from './components/ForgotPassword';
+import Reset from './components/Reset';
+import Post from './components/Post';
+import PostjobPage from './components/PostjobPage';
+import Application from './components/Application';
+import Postedjobs from './components/Postedjobs';
+
+
+
+export default function App() {
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/forgotpassword" element={<ForgotPassword />} />
+                    <Route path="/reset" element={<Reset />} />
+                    <Route path="/post" element={<Post />} />
+                    <Route path="/postjobpage" element={<PostjobPage />} />
+                    <Route path="/postedjobs" element={<Postedjobs />} />
+                    <Route path="/postjobPages" element={<PostjobPage />} />
+                    <Route path="/post" element={<Post />} />
+                    <Route path="/application" element={<Application />} />
+                    
+                </Routes>
+            </Router>
+        
+        </>
+    )
 }
-
-export default App;

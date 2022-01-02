@@ -39,7 +39,7 @@ export default function Application() {
                 </div>
 
                 { 
-                    totalApplication.map(application => (
+                   totalApplication &&  totalApplication.map(application => (
                         <ApplicationCard 
                         key={application.id}
                         name={application.name} 

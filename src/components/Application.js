@@ -35,11 +35,11 @@ export default function Application() {
                 <hr />
 
                 <div>
-                    <p>{totalApplication.length} application </p>
+                        {totalApplication && <p>{totalApplication.length} application </p>}
                 </div>
 
                 { 
-                    totalApplication.map(application => (
+                   totalApplication &&  totalApplication.map(application => (
                         <ApplicationCard 
                         key={application.id}
                         name={application.name} 
